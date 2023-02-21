@@ -41,7 +41,7 @@ function updateBoard() {
         else if (ele === -1) {
             squareEls[i].textContent = "❤️";
         }
-        else if (ele === null) {
+        else if (ele === 0) {
             squareEls[i].textContent = " ";
         }
     });

@@ -2,11 +2,11 @@ let squareEls = document.querySelectorAll(".sqr")!
 let messageEl = document.querySelector("#message")!
 let winningCombos =[[0,1,2],[3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]!
 
-let turn = -1
-let board = [0,0,0,0,0,0,0,0,0 ]
+let turn:number = -1
+let board:number[] = [0,0,0,0,0,0,0,0,0 ]
 
-let winner = false
-let tie = false
+let winner:boolean = false
+let tie:boolean = false
 let scoreBoard = {
   xWins: 0,
   oWins: 0,
@@ -49,7 +49,7 @@ function render(){
         squareEls[i].textContent = "💖"
       }  else if( ele === -1) {
         squareEls[i].textContent = "❤️"
-      } else if (ele === null){
+      } else if (ele === 0){
         squareEls[i].textContent = " "
       }
     }
